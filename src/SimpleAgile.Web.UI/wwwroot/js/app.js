@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('app', ['ngRoute','ngCookies'])
+    angular.module('app', ['ngRoute','ngCookies', 'base64'])
         .config(config)
         .run(run);
 

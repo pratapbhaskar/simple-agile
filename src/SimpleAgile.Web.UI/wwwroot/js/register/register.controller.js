@@ -5,9 +5,12 @@
         .module('app')
         .controller('registerController', registerController);
 
-    registerController.$inject = ['$location'];
+    registerController.$inject = ['$scope','$location'];
 
-    function registerController($location) {
-     
+    function registerController($scope,$location) {
+        $scope.register = function () {
+            $scope.dataloading = true;
+            //TODO : calling user service
+        }
     }
 })();
