@@ -3,17 +3,17 @@
 
     angular
         .module('app')
-        .controller('login', login);
+        .controller('loginController', loginController);
 
-    login.$inject = ['$location']; 
+    loginController.$inject = ['$scope', '$location'];
 
-    function login($location) {
-        /* jshint validthis:true */
-        var vm = this;
-        vm.title = 'login';
+    function loginController($scope, $location) {
+        $scope.loading = false;
+        $scope.login = function () {
+            $scope.loading = true;
 
-        activate();
+            //TODO: call api service to login user
 
-        function activate() { }
+        }
     }
 })();
